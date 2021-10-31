@@ -1,0 +1,400 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+}
+
+.clear {
+    clear: both;
+}
+
+.home {
+    background-image: url("../img/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+.top-box {
+    position: fixed;
+    top: 0;
+    z-index: 900;
+    background: rgba(79, 68, 109, 0.9);
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+    width: 75px;
+    height: 70px;
+    float: left;
+    margin-left: 10px;
+}
+
+h1 {
+    color: #f1f1f1;
+    position: relative;
+    left: 0%;
+    top: 35%;
+    font-size: 30px;
+    text-transform: uppercase;
+    animation-name: animation-h1;
+    animation-duration: 1s;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes animation-h1 {
+    0% {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+    }
+    80% {
+        transform: translate(-20px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.top-menu {
+    position: relative;
+    left: 40%;
+    top: -43%;
+}
+
+.top-menu li {
+    list-style: none;
+    display: inline-block;
+    margin-top: 30px;
+    transition: linear .1s;
+}
+
+.top-menu li:hover {
+    transform: translateY(-4px);
+}
+
+.top-menu li:active {
+    transform: translateY(2px) translateX(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.top-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    /* Top Right Bot Left */
+    padding: 40px 20px 10px 20px;
+    animation-name: animation-top-menu;
+    animation-duration: 1s;
+}
+
+@keyframes animation-top-menu {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    80% {
+        transform: translate(0, -50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.top-menu li a:hover {
+    border-bottom: 4px solid white;
+    background: rgba(61, 52, 83, 0.5);
+    padding-top: 40px;
+}
+
+#gioi-thieu {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 12%;
+}
+
+.information {
+    position: absolute;
+    top: 87%;
+    left: 10%;
+}
+
+.side-menu {
+    height: 367px;
+    position: relative;
+    top: 0%;
+    left: 230px;
+    width: 520px;
+    transition: .3s linear;
+    background: rgba(79, 68, 109, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.side-menu.active {
+    left: 230px;
+    width: 0px;
+}
+
+.toggle-btn {
+    position: absolute;
+    left: 515px;
+    top: 40%;
+    padding: 20px 0;
+    width: 40px;
+    height: 60px;
+    background: #333;
+    color: #f1f1f1;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.toggle-btn.active {
+    top: 40%;
+    left: -5px;
+}
+
+.the-sinh-vien {
+    width: 230px;
+    position: absolute;
+}
+
+table {
+    float: left;
+    text-align: left;
+    color: white;
+    margin-top: 50px;
+    margin-left: 60px;
+    opacity: 1;
+    transition: .5s linear;
+    animation-name: animation-table;
+    animation-duration: 1s;
+}
+
+table.active {
+    margin-top: 50px;
+    margin-left: -100px;
+    opacity: 0;
+    transition: .1s linear;
+}
+
+@keyframes animation-table {
+    0% {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+    }
+    80% {
+        transform: translate(-20px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+tr {
+    line-height: 50px;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+td {
+    padding-left: 50px;
+}
+
+.auto-audio {
+    position: absolute;
+    top: 7%;
+    left: 76%;
+    transition: .3s linear;
+    opacity: 0;
+}
+
+.auto-audio.active-2 {
+    opacity: 1;
+}
+
+.toggle-btn-2 {
+    position: absolute;
+    top: 100px;
+    left: 1210px;
+    padding: 130px 2px 20px 0;
+    width: 50px;
+    height: 300px;
+    background-color: #333;
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.toggle-btn-2:hover {
+    background-color: rgba(0, 0, 0, .2);
+    color: #333;
+}
+
+#trang-chu {
+    background-image: url('../img/background3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 120vh;
+}
+
+.page-1-trang-chu {
+    position: relative;
+    top: 65px;
+    left: 130px;
+    transition: linear .3s;
+}
+
+.page-2-trang-chu {
+    position: relative;
+    top: -490px;
+    left: 1350px;
+    width: 950px;
+    transition: linear .3s;
+}
+
+.col-1-of-3 li {
+    display: inline-block;
+    list-style-type: none;
+    width: 200px;
+    height: 150px;
+    margin-left: 100px;
+    margin-bottom: 35px;
+    border-left: 3px solid #ff4200;
+    border-bottom: 4px solid #ff4200;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(148, 146, 146, 0.2);
+}
+
+.col-1-of-3 li a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+    display: block;
+    font-size: 16px;
+    height: 150px;
+    transition: linear .1s;
+    border-radius: 20px;
+}
+
+.col-1-of-3 li i {
+    transition: linear .2s;
+}
+
+.icons {
+    margin-top: 40px;
+}
+
+.col-1-of-3 li a:hover {
+    color: #ff4200;
+    cursor: pointer;
+    transition: linear .2s;
+    outline: none;
+    transform: translateY(-5px);
+}
+
+.col-1-of-3 li a:active {
+    outline: none;
+    transform: translateY(5px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.toggle-btn-3 {
+    position: absolute;
+    top: 577px;
+    left: 1210px;
+    color: white;
+    height: 120vh;
+    padding-top: 300px;
+    padding-right: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+    background-color: rgba(199, 98, 5, 0.2);
+    transition: linear .3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.toggle-btn-3:hover {
+    background-color: rgba(255, 123, 0, 0.3);
+    transform: translateX(-3px);
+}
+
+.toggle-btn-3:active {
+    transform: translateX(5px);
+}
+
+.page-1-trang-chu.active-3 {
+    left: -1000px;
+}
+
+.page-2-trang-chu.active-3 {
+    left: 130px;
+}
+
+
+/* .toggle-btn-4 {
+    position: absolute;
+    top: 577px;
+    left: 0px;
+    color: white;
+    height: 120vh;
+    padding-top: 300px;
+    padding-right: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+    background-color: rgba(199, 98, 5, 0.2);
+    transition: linear .4s;    
+}
+
+.toggle-btn-4:hover {
+    background-color: rgba(255, 123, 0, 0.5);
+}
+
+
+.page-1-trang-chu.active-4{
+    left: 130px;
+}
+
+.page-2-trang-chu.active-4{
+    left: -1000px;
+} */
+
+.footer {
+    background-color: #ff4200;
+    width: 100%;
+    height: 50px;
+}
